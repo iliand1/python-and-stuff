@@ -1,3 +1,3 @@
-def hello_user(x):
-    return(f"Hello, {x}.")
-hello_user("x")
+import random
+a = random.randint
+print(a)
