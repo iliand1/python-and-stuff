@@ -1,1 +1,0 @@
-print("gay gay gay")
