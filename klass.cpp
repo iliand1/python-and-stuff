@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 using namespace std;
+
 /*
 https://www.cyberforum.ru/cpp-beginners/thread2180759.html
 https://www.bestprog.net/ru/2019/09/11/examples-of-using-c-tools-for-working-with-files-ru/#q05
