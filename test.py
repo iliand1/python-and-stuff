@@ -1,1 +1,1 @@
-print("gay gay")
+print("gay gay gay")
