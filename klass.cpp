@@ -11,7 +11,7 @@ struct klass
     float grade;
 };
 
-int N, M;
+int N, M, Gay;
 
 void Output(klass *new_klass) // Outputs Info to terminal
 {
