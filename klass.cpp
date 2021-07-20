@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <fstream>
 using namespace std;
 /*
 https://ru.stackoverflow.com/questions/642331/%D0%9A%D0%B0%D0%BA-%D1%81%D1%87%D0%B8%D1%82%D1%8B%D0%B2%D0%B0%D1%82%D1%8C-%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%82%D1%83%D1%80%D1%83-%D0%B8%D0%B7-%D1%84%D0%B0%D0%B9%D0%BB%D0%B0
@@ -10,8 +11,9 @@ struct klass
     int age;
     float grade;
 };
-
-int N, M, Gay;
+ifstream input_file;
+ofstream output_file;
+int N, M;
 
 void Output(klass *new_klass) // Outputs Info to terminal
 {
@@ -43,7 +45,7 @@ void Input(klass *new_klass) // First input in the program
     }
 }
 
-void Add(klass *new_klass) // Second ant etc. inputs in the program
+void Add(klass *new_klass) // Second and etc. inputs in the program
 {
     cout << "Enter number of additional students: \n";
     cin >> M;
@@ -66,6 +68,12 @@ void Add(klass *new_klass) // Second ant etc. inputs in the program
         cin.ignore();
     }
 }
+void Input_file(){
+    input_file;
+}
+void Output_file(){
+
+}
 int main()
 {
     klass *new_klass = new klass[N]; //init the place where data is stored
@@ -76,7 +84,8 @@ loh:
     cout << "Press 2 for additional input: \n";
     cout << "Press 3 for output \n";
     cout << "Press 4 for exit: \n";
-
+    cout << "Press 5 for file input: \n";
+    cout << "Press 6 for file output \n";
     cin >> B;
     if (B == 1)
     {
@@ -94,8 +103,17 @@ loh:
     {
         return 0;
     }
+    else if (B == 5)
+    {
+        Input_file();
+    }
+    else if (B == 6)
+    {
+        Output_file();
+    }
 
     goto loh;
     delete[] new_klass; // deletes the data
+
     return 0;
 }
