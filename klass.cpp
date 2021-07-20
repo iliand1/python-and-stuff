@@ -72,7 +72,8 @@ void Input_file(){
     input_file;
 }
 void Output_file(){
-
+    output_file.open("output_klass.txt");
+    output_file<<"da";
 }
 int main()
 {
@@ -83,9 +84,9 @@ loh:
     cout << "Press 1 for first input: \n";
     cout << "Press 2 for additional input: \n";
     cout << "Press 3 for output \n";
-    cout << "Press 4 for exit: \n";
-    cout << "Press 5 for file input: \n";
-    cout << "Press 6 for file output \n";
+    cout << "Press 4 for file input: \n";
+    cout << "Press 5 for file output \n";
+    cout << "Press 6 for exit: \n";
     cin >> B;
     if (B == 1)
     {
@@ -99,21 +100,21 @@ loh:
     {
         Add(new_klass);
     }
-    else if (B == 4)
+    else if (B == 6)
     {
         return 0;
     }
-    else if (B == 5)
+    else if (B == 4)
     {
         Input_file();
     }
-    else if (B == 6)
+    else if (B == 5)
     {
         Output_file();
     }
 
     goto loh;
     delete[] new_klass; // deletes the data
-
+    output_file.close();
     return 0;
 }
