@@ -61,7 +61,7 @@ void Add(klass *new_klass) // Second and etc. inputs in the program
         cin.ignore();
     }
 }
-void Input_file(klass *new_klass)
+void Input_file(klass *new_klass) // Inputs info from file
 {
     ifstream input_file;
     input_file.open("input.txt");
@@ -74,7 +74,7 @@ void Input_file(klass *new_klass)
     }
     input_file.close();
 }
-void Output_file(klass *new_klass)
+void Output_file(klass *new_klass) // Outputs info to file
 {
     ofstream output_file("output.txt");
     for (int i = 0; i < N; i++)
@@ -90,7 +90,7 @@ void Output_file(klass *new_klass)
 
 int main()
 {
-    klass *new_klass = new klass[N]; //init the place where data is stored
+    klass *new_klass = new klass[N]; // Init the place where data is stored
     int B = 0;
 
 loh:
@@ -127,6 +127,6 @@ loh:
     }
 
     goto loh;
-    delete[] new_klass; // deletes the data
+    delete[] new_klass; // deletes the data before closing application
     return 0;
 }
