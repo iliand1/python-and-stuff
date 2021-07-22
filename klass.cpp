@@ -1,7 +1,6 @@
 #include <iostream>
 #include <string>
 #include <fstream>
-#include <vector>
 using namespace std;
 struct klass
 {
@@ -79,10 +78,11 @@ void Output_file(klass *new_klass) // Outputs info to file
     ofstream output_file("output.txt");
     for (int i = 0; i < N; i++)
     {
-    
+
         output_file << new_klass[i].name << " " << new_klass[i].age << " " << new_klass[i].grade;
-        if (i!= N-1){
-            output_file<<"\n";
+        if (i != N - 1)
+        {
+            output_file << "\n";
         }
     }
     output_file.close();
