@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!doctype html>
 <html lang="en">
 <head>
@@ -42,3 +43,49 @@
 <script src="text_converter.js"></script>
 </body>
 </html>
+=======
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Converter</title>
+    <style>
+        .title {
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif
+            ;position: relative;
+        }
+        button {background-color: rgb(54, 54, 161);
+        float: left;
+	min-width: 150px;
+	max-width: 250px;
+	display: block;
+	margin: 1em;
+	padding: 1em 2em;
+	border: none;
+	color: inherit;
+	position: relative;
+	z-index: 1;border: black 1px ;border-radius: 15px}
+    
+    textarea{width: 500px; height: 500px;
+    background-color:lightblue; opacity: 30%;
+    border: black;}
+    </style>
+
+</head>
+<body>
+<div class="title">Case Converter</div>
+<div>
+    <textarea></textarea>
+</div>
+<div>
+    <button id="upper-case">Upper Case</button>
+    <button id="lower-case">Lower Case</button>
+    <button id="proper-case"">Proper Case</button>
+    <button id="sentence-case">Sentence Case</button>
+    <button id ="save-text-file" onclick="download()">Save text</button>
+</div>
+<script src="text_converter.js"></script>
+</body>
+</html>
+>>>>>>> 68a8548c94e7fe1d4d679d0f40254b37b556010b
